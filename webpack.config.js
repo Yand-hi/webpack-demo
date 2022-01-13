@@ -9,7 +9,16 @@ module.exports = {
     filename: '[name].[contenthash].js'
   },
   plugins: [new HtmlWebpackPlugin({
-    title:"Webpack App",
+    title: "Webpack App",
     template: "src/assets/index.html"
-  })]
+  })],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
 };
+
