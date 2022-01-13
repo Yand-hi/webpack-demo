@@ -8,5 +8,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js'
   },
-  plugins: [new HtmlWebpackPlugin()]
+  plugins: [new HtmlWebpackPlugin({
+    title:"Webpack App",
+    template: "src/assets/index.html"
+  })]
 };
